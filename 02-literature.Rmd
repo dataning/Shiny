@@ -1,5 +1,10 @@
 # Literature
 
-```{r}
-knitr::include_app("https://herolab.shinyapps.io/my_app/")
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 ```
+
+###App big
+
+<iframe src ="https://herolab.shinyapps.io/my_app/" height=1000px width=1000px />
+
