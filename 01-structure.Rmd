@@ -1,0 +1,11 @@
+# Structure
+
+Shiny apps are contained in a single script called `app.R`. The structure can be broken into three parts:
+
+- User interface object. The user interface (ui) object controls the layout and appearance of your app.
+
+- Server function. The server function contains the instructions that your computer needs to build your app
+
+- `shinyApp` function. The shinyApp function creates Shiny app objects from an explicit UI/server pair.
+
+The script `app.R` can live in a directory such as `newdir/`) or run with `runApp("newdir")`.
