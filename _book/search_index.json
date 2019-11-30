@@ -1,3 +1,9 @@
 [
-["structure.html", "2 Structure", " 2 Structure Shiny apps are contained in a single script called app.R. The structure can be broken into three parts: User interface object. The user interface (ui) object controls the layout and appearance of your app. Server function. The server function contains the instructions that your computer needs to build your app shinyApp function. The shinyApp function creates Shiny app objects from an explicit UI/server pair. The script app.R can live in a directory such as newdir/) or run with runApp(&quot;newdir&quot;). "]
+["index.html", "Shiny learning 1 What is Shiny and Shiny app?", " Shiny learning Ning Lu 2019-11-30 1 What is Shiny and Shiny app? Shiny is an R package that makes it easy to build interactive web applications (apps) straight from R. This lesson will get you started building Shiny apps right away. "],
+["structure.html", "2 Structure", " 2 Structure Shiny apps are contained in a single script called app.R. The structure can be broken into three parts: User interface object. The user interface (ui) object controls the layout and appearance of your app. Server function. The server function contains the instructions that your computer needs to build your app shinyApp function. The shinyApp function creates Shiny app objects from an explicit UI/server pair. The script app.R can live in a directory such as newdir/) or run with runApp(&quot;newdir&quot;). "],
+["literature.html", "3 Literature", " 3 Literature Here is a review of existing methods. "],
+["methods.html", "4 Methods", " 4 Methods We describe our methods in this chapter. "],
+["applications.html", "5 Applications 5.1 Example one 5.2 Example two", " 5 Applications Some significant applications are demonstrated in this chapter. 5.1 Example one 5.2 Example two "],
+["final-words.html", "6 Final Words", " 6 Final Words We have finished a nice book. "],
+["references.html", "References", " References "]
 ]
