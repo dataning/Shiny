@@ -20,7 +20,7 @@ library(shiny)
 # Second part, define UI for the Shiny app
 ui <- fluidPage(
   # App title ----
-  titlePanel("Hello Shiny!"),
+  titlePanel("Hello Shiny Learner!"),
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
     # Sidebar panel for inputs ----
@@ -28,7 +28,7 @@ ui <- fluidPage(
       # Input: Slider for the number of bins ----
       sliderInput(inputId = "bins",
                   label = "Number of bins:",
-                  min = 1,
+                  min = 5,
                   max = 50,
                   value = 30)
     ),
@@ -54,7 +54,7 @@ server <- function(input, output) {
   output$distPlot <- renderPlot({
     x    <- faithful$waiting
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    hist(x, breaks = bins, col = "#75AADB", border = "white",
+    hist(x, breaks = bins, col = "#75AADB", border = "blue",
          xlab = "Waiting time to next eruption (in mins)",
          main = "Histogram of waiting times")
   })
@@ -63,6 +63,8 @@ server <- function(input, output) {
 # Fourth part, tie up ui and server
 shinyApp(ui = ui, server = server)
 ```
+
+Note: use the keyboard shortcut to run app.R: Command+Shift+Enter (Mac) (Control+Shift+Enter on Windows).
 
 The alternative way is to run the R shiny script remotely like a app. This can be achieved by creating a folder called *my_app* in your current working directory. Then save the R shiny script above into a R script file called `app.R` in the *my_app* folder. Then you can open a new R blank script and the R Shiny app should pop up when you run `runApp("my_app")` in the console. 
    
