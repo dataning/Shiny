@@ -171,6 +171,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><code>shinyApp</code> function. The shinyApp function creates Shiny app objects from an explicit UI/server pair.</p></li>
 </ul>
 <p>The script <code>app.R</code> can be run like a typical R script or run like a app through a folder <code>runApp(&quot;newdir&quot;)</code>.</p>
+<p>This is the way to run R shiny like a typical R object such as plots.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># First part, load the package</span></a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(shiny)</a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"></a>
@@ -219,6 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb1-46" data-line-number="46"></a>
 <a class="sourceLine" id="cb1-47" data-line-number="47"><span class="co"># Fourth part, tie up ui and server</span></a>
 <a class="sourceLine" id="cb1-48" data-line-number="48"><span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server)</a></code></pre></div>
+<p>The alternative way is to run the R shiny script remotely like a app. This can be achieved by creating a folder called <em>my_app</em> in your current working directory. Then save the R shiny script above into a R script file called <code>app.R</code> in the <em>my_app</em> folder. Then you can open a new R blank script and the R Shiny app should pop up when you run <code>runApp(&quot;my_app&quot;)</code> in the console.</p>
 
 </div>
             </section>

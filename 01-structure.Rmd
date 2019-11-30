@@ -12,6 +12,7 @@ Shiny apps are contained in a single script called `app.R`. The structure can be
 
 The script `app.R` can be run like a typical R script or run like a app through a folder `runApp("newdir")`.
 
+This is the way to run R shiny like a typical R object such as plots. 
 ```{r eval=FALSE}
 # First part, load the package
 library(shiny)
@@ -62,4 +63,8 @@ server <- function(input, output) {
 # Fourth part, tie up ui and server
 shinyApp(ui = ui, server = server)
 ```
+
+The alternative way is to run the R shiny script remotely like a app. This can be achieved by creating a folder called *my_app* in your current working directory. Then save the R shiny script above into a R script file called `app.R` in the *my_app* folder. Then you can open a new R blank script and the R Shiny app should pop up when you run `runApp("my_app")` in the console. 
+   
+
 
