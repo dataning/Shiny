@@ -66,5 +66,5 @@ shinyApp(ui = ui, server = server)
 
 The alternative way is to run the R shiny script remotely like a app. This can be achieved by creating a folder called *my_app* in your current working directory. Then save the R shiny script above into a R script file called `app.R` in the *my_app* folder. Then you can open a new R blank script and the R Shiny app should pop up when you run `runApp("my_app")` in the console. 
    
-
+`runApp` is similar to read.csv, read.table, and many other functions in R. The first argument of runApp is the filepath from your working directory to the app’s directory. The code above assumes that the app directory is in your working directory. In this case, the filepath is just the name of the directory.
 
