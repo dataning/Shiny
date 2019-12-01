@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Literature | Shiny learning</title>
+  <title>5 Application layout guide | Shiny learning</title>
   <meta name="description" content="This is a minimal example of learning Shiny." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Literature | Shiny learning" />
+  <meta property="og:title" content="5 Application layout guide | Shiny learning" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Literature | Shiny learning" />
+  <meta name="twitter:title" content="5 Application layout guide | Shiny learning" />
   
   <meta name="twitter:description" content="This is a minimal example of learning Shiny." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="interface.html"/>
-<link rel="next" href="application-layout-guide.html"/>
+<link rel="prev" href="literature.html"/>
+<link rel="next" href="widget.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -165,19 +165,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="literature" class="section level1">
-<h1><span class="header-section-number">4</span> Literature</h1>
-<p>###App big</p>
-<iframe src ="https://gallery.shinyapps.io/087-crandash/" height=1000px width=1000px />
+<div id="application-layout-guide" class="section level1">
+<h1><span class="header-section-number">5</span> Application layout guide</h1>
+<p>Shiny includes a number of facilities for laying out the components of an application. This guide describes the following application layout features:</p>
+<ul>
+<li><p>The simple default layout with a sidebar for inputs and a large main area for output.</p></li>
+<li><p>Custom application layouts using the Shiny grid layout system.</p></li>
+<li><p>Segmenting layouts using the tabsetPanel() and navlistPanel() functions.</p></li>
+<li><p>Creating applications with multiple top-level components using the navbarPage() function.</p></li>
+</ul>
+<p>These features were implemented using the layout features available in Bootstrap 2, an extremely popular HTML/CSS framework (though no prior experience with Bootstrap is assumed).</p>
+<blockquote>
+<p>This means that <code>Bootstrap2</code> is a potentially good look-into language.</p>
+</blockquote>
+<p>Reference: (<a href="https://shiny.rstudio.com/articles/layout-guide.html" class="uri">https://shiny.rstudio.com/articles/layout-guide.html</a>)</p>
+<div id="standard-one" class="section level2">
+<h2><span class="header-section-number">5.1</span> Standard one</h2>
+<p><img src="https://shiny.rstudio.com/images/Shiny-Application-Layout-Guide-images/sidebarLayout.png" /></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="interface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="application-layout-guide.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="literature.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="widget.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

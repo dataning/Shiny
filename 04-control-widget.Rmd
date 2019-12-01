@@ -1,0 +1,129 @@
+# Widget
+
+This lesson will show you how to add control widgets to your Shiny apps. What’s a widget? A web element that your users can interact with. Widgets provide a way for your users to send messages to the Shiny app.
+
+## Pre-built widgets
+
+Shiny comes with a family of pre-built widgets, each created with a transparently named R function. For example, Shiny provides a function named actionButton that creates an Action Button and a function named sliderInput that creates a slider bar.
+
+The standard Shiny widgets are:
+
+function	widget
+actionButton	Action Button
+checkboxGroupInput	A group of check boxes
+checkboxInput	A single check box
+dateInput	A calendar to aid date selection
+dateRangeInput	A pair of calendars for selecting a date range
+fileInput	A file upload control wizard
+helpText	Help text that can be added to an input form
+numericInput	A field to enter numbers
+radioButtons	A set of radio buttons
+selectInput	A box with choices to select from
+sliderInput	A slider bar
+submitButton	A submit button
+textInput	A field to enter text
+
+Some of these widgets are built using the Twitter Bootstrap project, a popular open source framework for building user interfaces.
+
+## Adding widgets
+
+To add a widget to shiny app, place a widget function in sidebarPanel or mainPanel in your ui object.
+
+Each widget function requires several arguments. The first two arguments for each widget are
+
+- a name for the widget: The user will not see this name, but you can use it to access the widget’s value. The name should be a character string.
+
+- a label: This label will appear with the widget in your app. It should be a character string, but it can be an empty string "".
+
+library(shiny)
+
+```{r}
+# Define UI ----
+ui <- fluidPage(
+  titlePanel("Basic widgets"),
+  
+  fluidRow(
+    
+    column(3,
+           h3("Buttons"),
+           actionButton("action", "Action"),
+           br(),
+           br(), 
+           submitButton("Submit")),
+    
+    column(3,
+           h3("Single checkbox"),
+           checkboxInput("checkbox", "Choice A", value = TRUE)),
+    
+    column(3, 
+           checkboxGroupInput("checkGroup", 
+                              h3("Checkbox group"), 
+                              choices = list("Choice 1" = 1, 
+                                             "Choice 2" = 2, 
+                                             "Choice 3" = 3),
+                              selected = 1)),
+    
+    column(3, 
+           dateInput("date", 
+                     h3("Date input"), 
+                     value = "2014-01-01"))   
+  ),
+  
+  fluidRow(
+    
+    column(3,
+           dateRangeInput("dates", h3("Date range"))),
+    
+    column(3,
+           fileInput("file", h3("File input"))),
+    
+    column(3, 
+           h3("Help text"),
+           helpText("Note: help text isn't a true widget,", 
+                    "but it provides an easy way to add text to",
+                    "accompany other widgets.")),
+    
+    column(3, 
+           numericInput("num", 
+                        h3("Numeric input"), 
+                        value = 1))   
+  ),
+  
+  fluidRow(
+    
+    column(3,
+           radioButtons("radio", h3("Radio buttons"),
+                        choices = list("Choice 1" = 1, "Choice 2" = 2,
+                                       "Choice 3" = 3),selected = 1)),
+    
+    column(3,
+           selectInput("select", h3("Select box"), 
+                       choices = list("Choice 1" = 1, "Choice 2" = 2,
+                                      "Choice 3" = 3), selected = 1)),
+    
+    column(3, 
+           sliderInput("slider1", h3("Sliders"),
+                       min = 0, max = 100, value = 50),
+           sliderInput("slider2", "",
+                       min = 0, max = 100, value = c(25, 75))
+    ),
+    
+    column(3, 
+           textInput("text", h3("Text input"), 
+                     value = "Enter text..."))   
+  )
+  
+)
+
+# Define server logic ----
+server <- function(input, output) {
+  
+}
+
+# Run the app ----
+shinyApp(ui = ui, server = server)
+```
+
+There're a number of things you can learn from this code. 
+
+First, `fluidRow()`. You can explore a bit more this [Application layout guide](https://shiny.rstudio.com/articles/layout-guide.html). 

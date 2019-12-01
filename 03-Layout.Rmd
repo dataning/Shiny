@@ -1,0 +1,21 @@
+# Application layout guide
+
+Shiny includes a number of facilities for laying out the components of an application. This guide describes the following application layout features:
+
+- The simple default layout with a sidebar for inputs and a large main area for output.
+
+- Custom application layouts using the Shiny grid layout system.
+
+- Segmenting layouts using the tabsetPanel() and navlistPanel() functions.
+
+- Creating applications with multiple top-level components using the navbarPage() function.
+
+These features were implemented using the layout features available in Bootstrap 2, an extremely popular HTML/CSS framework (though no prior experience with Bootstrap is assumed).
+
+> This means that `Bootstrap2` is a potentially good look-into language.
+
+Reference: (https://shiny.rstudio.com/articles/layout-guide.html)
+
+## Standard one
+
+![](https://shiny.rstudio.com/images/Shiny-Application-Layout-Guide-images/sidebarLayout.png)
