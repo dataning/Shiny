@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Layout() functions | Raising Shiny animals (apps)</title>
+  <title>2 Shiny animals (apps)? | Raising Shiny animals (apps)</title>
   <meta name="description" content="This is a minimal example of learning Shiny." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Layout() functions | Raising Shiny animals (apps)" />
+  <meta property="og:title" content="2 Shiny animals (apps)? | Raising Shiny animals (apps)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Layout() functions | Raising Shiny animals (apps)" />
+  <meta name="twitter:title" content="2 Shiny animals (apps)? | Raising Shiny animals (apps)" />
   
   <meta name="twitter:description" content="This is a minimal example of learning Shiny." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="shinys-head.html"/>
-<link rel="next" href="input-functions.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="shinys-head.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -163,140 +163,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="layout-functions" class="section level1">
-<h1><span class="header-section-number">4</span> Layout() functions</h1>
-<p>In the beginning of UI Layout() functions, <code>fluidPage</code> creates a page with fluid layout for the Shiny app. Within the section of <code>fluidPage</code>, there’re two main sub functions - Input() and Output() functions.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"> ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="co"># *Input() functions,</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="co"># *Output() functions</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">)</a></code></pre></div>
-<p>Here is a list of all UI Layout() functions avaliable:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Functions</th>
-<th>Display</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>actionButton(actionLink)</td>
-<td>Action button/link</td>
-</tr>
-<tr class="even">
-<td>checkboxGroupInput()</td>
-<td>Checkbox Group Input Control</td>
-</tr>
-<tr class="odd">
-<td>checkboxInput()</td>
-<td>Checkbox Input Control</td>
-</tr>
-<tr class="even">
-<td>absolutePanel(fixedPanel)</td>
-<td>Panel with absolute positioning</td>
-</tr>
-<tr class="odd">
-<td>bootstrapPage (basicPage)</td>
-<td>Create a Bootstrap page</td>
-</tr>
-<tr class="even">
-<td>column</td>
-<td>Create a column within a UI definition</td>
-</tr>
-<tr class="odd">
-<td>conditionalPanel</td>
-<td>Conditional Panel</td>
-</tr>
-<tr class="even">
-<td>fillPage</td>
-<td>Create a page that fills the window</td>
-</tr>
-<tr class="odd">
-<td>fillRow (fillCol)</td>
-<td>Flex Box-based row/column layouts</td>
-</tr>
-<tr class="even">
-<td>fixedPage (fixedRow)</td>
-<td>Create a page with a fixed layout</td>
-</tr>
-<tr class="odd">
-<td>fluidPage (fluidRow)</td>
-<td>Create a page with fluid layout</td>
-</tr>
-<tr class="even">
-<td>headerPanel</td>
-<td>Create a header panel</td>
-</tr>
-<tr class="odd">
-<td>helpText</td>
-<td>Create a help text element</td>
-</tr>
-<tr class="even">
-<td>icon</td>
-<td>Create an icon</td>
-</tr>
-<tr class="odd">
-<td>mainPanel</td>
-<td>Create a main panel</td>
-</tr>
-<tr class="even">
-<td>navbarPage (navbarMenu)</td>
-<td>Create a page with a top level navigation bar</td>
-</tr>
-<tr class="odd">
-<td>navlistPanel</td>
-<td>Create a navigation list panel</td>
-</tr>
-<tr class="even">
-<td>pageWithSidebar</td>
-<td>Create a page with a sidebar</td>
-</tr>
-<tr class="odd">
-<td>sidebarLayout</td>
-<td>Layout a sidebar and main area</td>
-</tr>
-<tr class="even">
-<td>sidebarPanel</td>
-<td>Create a sidebar panel</td>
-</tr>
-<tr class="odd">
-<td>tabPanel</td>
-<td>Create a tab panel</td>
-</tr>
-<tr class="even">
-<td>tabsetPanel</td>
-<td>Create a tabset panel</td>
-</tr>
-<tr class="odd">
-<td>titlePanel</td>
-<td>Create a panel containing an application title.</td>
-</tr>
-<tr class="even">
-<td>inputPanel</td>
-<td>Input panel</td>
-</tr>
-<tr class="odd">
-<td>flowLayout</td>
-<td>Flow layout</td>
-</tr>
-<tr class="even">
-<td>splitLayout</td>
-<td>Split layout</td>
-</tr>
-<tr class="odd">
-<td>verticalLayout</td>
-<td>Lay out UI elements vertically</td>
-</tr>
-<tr class="even">
-<td>wellPanel</td>
-<td>Create a well panel</td>
-</tr>
-<tr class="odd">
-<td>withMathJax</td>
-<td>Load the MathJax library and typeset math expressions</td>
-</tr>
-</tbody>
-</table>
+<div id="shiny-animals-apps" class="section level1">
+<h1><span class="header-section-number">2</span> Shiny animals (apps)?</h1>
+<p>Shiny is an R package that makes it easy to build interactive web applications (apps) straight from R. This lesson will get you started building Shiny apps right away.</p>
 
 </div>
             </section>
@@ -304,8 +173,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="shinys-head.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="input-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shinys-head.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

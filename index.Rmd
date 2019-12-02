@@ -15,6 +15,6 @@ link-citations: yes
 description: "This is a minimal example of learning Shiny."
 ---
 
-# Shiny animals (apps)?
+# Aim
 
-Shiny is an R package that makes it easy to build interactive web applications (apps) straight from R. This lesson will get you started building Shiny apps right away.
+Let's raise a great Shiny animal. Sorry, Shiny app. 
