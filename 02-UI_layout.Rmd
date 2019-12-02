@@ -1,0 +1,44 @@
+# Layout() functions
+
+In the beginning of UI Layout() functions, `fluidPage` creates a page with fluid layout for the Shiny app. Within the section of `fluidPage`, there're two main sub functions - Input() and Output() functions. 
+
+```{r eval=FALSE}
+ ui <- fluidPage(
+  # *Input() functions,
+  # *Output() functions
+)
+```
+
+Here is a list of all UI Layout() functions avaliable: 
+
+|         Functions         |                        Display                        |
+|---------------------------|-------------------------------------------------------|
+| actionButton(actionLink)  | Action button/link                                    |
+| checkboxGroupInput()      | Checkbox Group Input Control                          |
+| checkboxInput()           | Checkbox Input Control                                |
+| absolutePanel(fixedPanel) | Panel with absolute positioning                       |
+| bootstrapPage (basicPage) | Create a Bootstrap page                               |
+| column                    | Create a column within a UI definition                |
+| conditionalPanel          | Conditional Panel                                     |
+| fillPage                  | Create a page that fills the window                   |
+| fillRow (fillCol)         | Flex Box-based row/column layouts                     |
+| fixedPage (fixedRow)      | Create a page with a fixed layout                     |
+| fluidPage (fluidRow)      | Create a page with fluid layout                       |
+| headerPanel               | Create a header panel                                 |
+| helpText                  | Create a help text element                            |
+| icon                      | Create an icon                                        |
+| mainPanel                 | Create a main panel                                   |
+| navbarPage (navbarMenu)   | Create a page with a top level navigation bar         |
+| navlistPanel              | Create a navigation list panel                        |
+| pageWithSidebar           | Create a page with a sidebar                          |
+| sidebarLayout             | Layout a sidebar and main area                        |
+| sidebarPanel              | Create a sidebar panel                                |
+| tabPanel                  | Create a tab panel                                    |
+| tabsetPanel               | Create a tabset panel                                 |
+| titlePanel                | Create a panel containing an application title.       |
+| inputPanel                | Input panel                                           |
+| flowLayout                | Flow layout                                           |
+| splitLayout               | Split layout                                          |
+| verticalLayout            | Lay out UI elements vertically                        |
+| wellPanel                 | Create a well panel                                   |
+| withMathJax               | Load the MathJax library and typeset math expressions |

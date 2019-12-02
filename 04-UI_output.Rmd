@@ -1,0 +1,28 @@
+# Output() functions
+
+This is how a common Output() function is listed:
+
+```{r eval=FALSE}
+plotOutput("hist")
+```
+
+- `plotOutput()`: This is to decide what sort of output to display 
+- name label    : This is the name given to the output object
+
+Here is a list of all Output() functions avaliable: 
+
+|                 Function                |                   Display                   |
+|-----------------------------------------|---------------------------------------------|
+| dataTableOutput()                       | Create an HTML output element               |
+| plotOutput (imageOutput)                | Create an plot or image output element      |
+| outputOptions ()                        | Set options for an output object            |
+| tableOutput (dataTableOutput)           | Create a table output element               |
+| textOutput()                            | Create a text output element                |
+| verbatimTextOutput()                    | Create a verbatim text output element       |
+| downloadButton (downloadLink)           | Create a download button or link            |
+| Progress()                              | Reporting progress (object-oriented API)    |
+| withProgress (setProgress, incProgress) | Reporting progress (functional API)         |
+| modalDialog()                           | Create a modal dialog UI                    |
+| urlModal()                              | Generate a modal dialog that displays a URL |
+| showModal (removeModal)                 | Show or remove a modal dialog               |
+| showNotification (removeNotification)   | Show or remove a notification               |

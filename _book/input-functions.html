@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Raising Shiny animals (apps)</title>
+  <title>4 Input() functions | Raising Shiny animals (apps)</title>
   <meta name="description" content="This is a minimal example of learning Shiny." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Raising Shiny animals (apps)" />
+  <meta property="og:title" content="4 Input() functions | Raising Shiny animals (apps)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Raising Shiny animals (apps)" />
+  <meta name="twitter:title" content="4 Input() functions | Raising Shiny animals (apps)" />
   
   <meta name="twitter:description" content="This is a minimal example of learning Shiny." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="shinys-tail.html"/>
-
+<link rel="prev" href="layout-functions.html"/>
+<link rel="next" href="output-functions.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -162,9 +162,166 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
-<p><a href="https://shiny.rstudio.com/reference/shiny/1.0.5/">Shiny Function reference</a>, version 1.0.5, 1 December 2019.</p>
+<div id="input-functions" class="section level1">
+<h1><span class="header-section-number">4</span> Input() functions</h1>
+<p>This is how a common Input() function is listed:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">sliderInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;num&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;Choose a number&quot;</span>, ...)</a></code></pre></div>
+<ul>
+<li><code>sliderInput</code>: sliderInput() from a list of Input() functions</li>
+<li><code>inputId</code> : input name(internal use)</li>
+<li><code>label</code> : label to display on the input part of the Shiny app</li>
+<li><code>.....</code> : specific arguments or paremeters for the Input() functions</li>
+</ul>
+<p>Here is a list of all Input() functions avaliable:
+<img src="https://www.dropbox.com/s/05hqa0yhcky9y82/shiny_input_functions.png?raw=1" /></p>
+<table>
+<colgroup>
+<col width="45%" />
+<col width="54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Display</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>actionButton(actionLink)</td>
+<td>Action button/link</td>
+</tr>
+<tr class="even">
+<td>checkboxGroupInput()</td>
+<td>Checkbox Group Input Control</td>
+</tr>
+<tr class="odd">
+<td>checkboxInput()</td>
+<td>Checkbox Input Control</td>
+</tr>
+<tr class="even">
+<td>dateInput()</td>
+<td>Create date input</td>
+</tr>
+<tr class="odd">
+<td>dateRangeInput()</td>
+<td>Create date range input</td>
+</tr>
+<tr class="even">
+<td>fileInput()</td>
+<td>File Upload Control</td>
+</tr>
+<tr class="odd">
+<td>numericInput()</td>
+<td>Create a numeric input control</td>
+</tr>
+<tr class="even">
+<td>radioButtons()</td>
+<td>Create radio buttons</td>
+</tr>
+<tr class="odd">
+<td>selectInput(selectizeInput)</td>
+<td>Create a select list input control</td>
+</tr>
+<tr class="even">
+<td>sliderInput(animationOptions)</td>
+<td>Slider Input Widget</td>
+</tr>
+<tr class="odd">
+<td>submitButton()</td>
+<td>Create a submit button</td>
+</tr>
+<tr class="even">
+<td>textInput()</td>
+<td>Create a text input control</td>
+</tr>
+<tr class="odd">
+<td>textAreaInput()</td>
+<td>Create a textarea input control</td>
+</tr>
+<tr class="even">
+<td>passwordInput()</td>
+<td>Create a password input control</td>
+</tr>
+<tr class="odd">
+<td>modalButton()</td>
+<td>Create a button for a modal dialog</td>
+</tr>
+<tr class="even">
+<td>updateActionButton()</td>
+<td>Change the label or icon of an action button on the client</td>
+</tr>
+<tr class="odd">
+<td>updateCheckboxGroupInput()</td>
+<td>Change the value of a checkbox group input on the client</td>
+</tr>
+<tr class="even">
+<td>updateCheckboxInput()</td>
+<td>Change the value of a checkbox input on the client</td>
+</tr>
+<tr class="odd">
+<td>updateDateInput()</td>
+<td>Change the value of a date input on the client</td>
+</tr>
+<tr class="even">
+<td>updateDateRangeInput()</td>
+<td>Change the start and end values of a date range input on the client</td>
+</tr>
+<tr class="odd">
+<td>updateNumericInput()</td>
+<td>Change the value of a number input on the client</td>
+</tr>
+<tr class="even">
+<td>updateRadioButtons()</td>
+<td>Change the value of a radio input on the client</td>
+</tr>
+<tr class="odd">
+<td>updateSelectInput(updateSelectizeInput)</td>
+<td>Change the value of a select input on the client</td>
+</tr>
+<tr class="even">
+<td>updateSliderInput()</td>
+<td>Change the value of a slider input on the client</td>
+</tr>
+<tr class="odd">
+<td>updateTabsetPanel(updateNavbarPage, updateNavlistPanel)</td>
+<td>Change the selected tab on the client</td>
+</tr>
+<tr class="even">
+<td>insertTab(prependTab, appendTab, removeTab)</td>
+<td>Dynamically insert/remove a tabPanel</td>
+</tr>
+<tr class="odd">
+<td>showTab (hideTab)</td>
+<td>Dynamically hide/show a tabPanel</td>
+</tr>
+<tr class="even">
+<td>updateTextInput()</td>
+<td>Change the value of a text input on the client</td>
+</tr>
+<tr class="odd">
+<td>updateTextAreaInput()</td>
+<td>Change the value of a textarea input on the client</td>
+</tr>
+<tr class="even">
+<td>updateQueryString()</td>
+<td>Update URL in browser’s location bar</td>
+</tr>
+<tr class="odd">
+<td>getQueryString(getUrlHash)</td>
+<td>Get the query string / hash component from the URL</td>
+</tr>
+</tbody>
+</table>
+<p>This is another Input() function with <code>sliderInput()</code>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">sliderInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;num&quot;</span>, </a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="dt">label =</span> <span class="st">&quot;Choose a number&quot;</span>, </a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="dt">value =</span> <span class="dv">25</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">100</span>)</a></code></pre></div>
+<ul>
+<li><code>sliderInput</code> : sliderInput() from a list of Input() functions</li>
+<li><code>inputId</code> : input name(internal use)</li>
+<li><code>label</code> : label to display is “Choose a number”</li>
+<li><code>value = 25, min = 1, max = 100</code>: value falls between 1 and 100 but the sliderbar sits at 25</li>
+</ul>
 
 </div>
             </section>
@@ -172,8 +329,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="shinys-tail.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="layout-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="output-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

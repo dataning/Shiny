@@ -1,0 +1,26 @@
+# Layout, Input and Output
+
+This is a simple Shiny app with the Input() and Output() functions. 
+
+```{r eval=FALSE}
+library(shiny)
+
+ui <- fluidPage( 
+    sliderInput(inputId = "num",        # Input()  starts
+    label = "Choose a number",          # Input()  continues
+    value = 25, min = 1, max = 100),    # Input()  ends
+    plotOutput("hist")                  # Output() starts/ends
+)
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
+```
+
+- `sliderInput`         : sliderInput() from a list of Input() functions
+- `inputId`             : an unique id to the widget so the server side knows how to access it. 
+- `label`               : label as "Choose a number".
+- `value = ... max = )` : input specific arguments or parameters. 
+- `plotOutput("hist")`  : plotOutput() from Output() functions with the object called `hist`. 
+
+**Attention**: While the Output() functions are placed in the UI component, it still needs to express or rebuild itself on the server side. 

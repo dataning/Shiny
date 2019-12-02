@@ -1,0 +1,25 @@
+# Shiny's head
+
+Shiny app has four individual parts: head, two parts of the body and tail. The two parts contributing to the body are _server_ and _interface (UI)_. The head is where the shiny package gets intitated and the tail part is where two parts of the body _server_ and _interface (UI)_ get knitted and the shiny app is deployed. 
+
+## One file
+This is a basic Shiny's skeleton in the file format of *app.R*:
+```{r eval=FALSE}
+library(shiny)                          # Head       - loading the shiny package
+ui <- fluidPage()                       # Upper body - setting up the interface
+server <- function(input, output) {}    # Lower body - setting up the server side
+shinyApp(ui= ui, server = server)       # Tail       - knitting both sides together
+```
+
+## Two files
+For two separate files format Shiny, the *ui*.R will rewrite as
+```{r eval=FALSE}
+library(shiny)
+shinyUI(fluidPage())
+```
+
+and *server.R* rewrite as
+```{r eval=FALSE}
+library(shiny)
+shinyServer(function(input, output) {})
+```

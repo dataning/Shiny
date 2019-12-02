@@ -1,0 +1,32 @@
+# Server side
+
+This is the skeleton for the server side.
+
+```{r eval=FALSE}
+server <- function(input, output) {}
+```
+
+First, rebuild the Output() function's object from the UI side. The object was previously lablled as `hist`. In a way, `output$hist` is equivalent of `plotOutput("hist")`. 
+
+```{r eval=FALSE}
+server <- function(input, output) {
+    output$hist <- # code
+}
+```
+
+Second, `renderYOUR_CHOSEN_OUTPUT_FUNCTION()` the output object. In this case, it's `renderPlot({})`. 
+
+```{r eval=FALSE}
+server <- function(input, output) {
+    output$hist <- renderPlot({ 
+        hist(rnorm(100)) 
+        }) 
+}
+```
+
+- `output$hist`    : the Output() function's object on the server side. 
+- `renderPlot`     : renderPlot as the renderYOUR_CHOSEN_OUTPUT_FUNCTION(). 
+- `hist(rnorm(100)`: code block to rebuild the output object.
+
+
+

@@ -1,6 +1,11 @@
 --- 
-title: "Raising little cute Shiny animals (apps)"
-author: "Ning Lu"
+title: "Raising Shiny animals (apps)"
+author:
+  - name: Ning Lu
+    affiliation: Bradford Institute of Health Research (BIHR)
+  - name: Bradford Teaching Hospitals NHS Foundation Trust (BTHFT) 
+    affiliation: Leeds Institute for Data Analytics, University of Leeds (LIDA)
+  - name: Centre for Applied Education Research (CAER)
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -10,6 +15,6 @@ link-citations: yes
 description: "This is a minimal example of learning Shiny."
 ---
 
-# What is Shiny and Shiny app?
+# Shiny animals (apps)?
 
 Shiny is an R package that makes it easy to build interactive web applications (apps) straight from R. This lesson will get you started building Shiny apps right away.

@@ -1,0 +1,62 @@
+# Input() functions
+
+This is how a common Input() function is listed:
+
+```{r eval=FALSE}
+sliderInput(inputId = "num", label = "Choose a number", ...)
+```
+- `sliderInput`: sliderInput() from a list of Input() functions
+- `inputId`    : input name(internal use)
+- `label`      : label to display on the input part of the Shiny app
+- `.....`      : specific arguments or paremeters for the Input() functions
+
+Here is a list of all Input() functions avaliable: 
+![](https://www.dropbox.com/s/05hqa0yhcky9y82/shiny_input_functions.png?raw=1)
+
+|                         Function                        |                               Display                               |
+|---------------------------------------------------------|---------------------------------------------------------------------|
+| actionButton(actionLink)                                | Action button/link                                                  |
+| checkboxGroupInput()                                    | Checkbox Group Input Control                                        |
+| checkboxInput()                                         | Checkbox Input Control                                              |
+| dateInput()                                             | Create date input                                                   |
+| dateRangeInput()                                        | Create date range input                                             |
+| fileInput()                                             | File Upload Control                                                 |
+| numericInput()                                          | Create a numeric input control                                      |
+| radioButtons()                                          | Create radio buttons                                                |
+| selectInput(selectizeInput)                             | Create a select list input control                                  |
+| sliderInput(animationOptions)                           | Slider Input Widget                                                 |
+| submitButton()                                          | Create a submit button                                              |
+| textInput()                                             | Create a text input control                                         |
+| textAreaInput()                                         | Create a textarea input control                                     |
+| passwordInput()                                         | Create a password input control                                     |
+| modalButton()                                           | Create a button for a modal dialog                                  |
+| updateActionButton()                                    | Change the label or icon of an action button on the client          |
+| updateCheckboxGroupInput()                              | Change the value of a checkbox group input on the client            |
+| updateCheckboxInput()                                   | Change the value of a checkbox input on the client                  |
+| updateDateInput()                                       | Change the value of a date input on the client                      |
+| updateDateRangeInput()                                  | Change the start and end values of a date range input on the client |
+| updateNumericInput()                                    | Change the value of a number input on the client                    |
+| updateRadioButtons()                                    | Change the value of a radio input on the client                     |
+| updateSelectInput(updateSelectizeInput)                 | Change the value of a select input on the client                    |
+| updateSliderInput()                                     | Change the value of a slider input on the client                    |
+| updateTabsetPanel(updateNavbarPage, updateNavlistPanel) | Change the selected tab on the client                               |
+| insertTab(prependTab, appendTab, removeTab)             | Dynamically insert/remove a tabPanel                                |
+| showTab (hideTab)                                       | Dynamically hide/show a tabPanel                                    |
+| updateTextInput()                                       | Change the value of a text input on the client                      |
+| updateTextAreaInput()                                   | Change the value of a textarea input on the client                  |
+| updateQueryString()                                     | Update URL in browser's location bar                                |
+| getQueryString(getUrlHash)                              | Get the query string / hash component from the URL                  |
+
+This is another Input() function with `sliderInput()`. 
+
+```{r eval=FALSE}
+sliderInput(inputId = "num", 
+label = "Choose a number", 
+value = 25, min = 1, max = 100)
+```
+
+- `sliderInput`                   : sliderInput() from a list of Input() functions
+- `inputId`                       : input name(internal use)
+- `label`                         : label to display is "Choose a number"
+- `value = 25, min = 1, max = 100`: value falls between 1 and 100 but the sliderbar sits at 25
+

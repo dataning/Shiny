@@ -1,0 +1,5 @@
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+
+[Shiny Function reference](https://shiny.rstudio.com/reference/shiny/1.0.5/), version 1.0.5, 1 December 2019. 
