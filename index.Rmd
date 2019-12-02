@@ -1,5 +1,5 @@
 --- 
-title: "Shiny learning"
+title: "Raising little cute Shiny animals (apps)"
 author: "Ning Lu"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

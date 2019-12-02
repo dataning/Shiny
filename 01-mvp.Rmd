@@ -1,9 +1,9 @@
-# Shiny's layout
+# MVP
 
 Shiny app has four individual parts: head, two parts of the body and tail. The two parts contributing to the body are _server_ and _interface (UI)_. The head is where the shiny package gets intitated and the tail part is where two parts of the body _server_ and _interface (UI)_ get knitted and the shiny app is deployed. 
 
 This is a basic Shiny's skeleton in the file format of *app.R*:
-```{r}
+```{r eval=FALSE}
 library(shiny)                          # Head       - loading the shiny package
 ui <- fluidPage()                       # Upper body - setting up the interface
 server <- function(input, output) {}    # Lower body - setting up the server side
@@ -11,13 +11,13 @@ shinyApp(ui= ui, server = server)       # Tail       - knitting both sides toget
 ```
 
 For two separate files format Shiny, the *ui*.R will rewrite as
-```{r}
+```{r eval=FALSE}
 library(shiny)
 shinyUI(fluidPage())
 ```
 
 and *server.R* rewrite as
-```{r}
+```{r eval=FALSE}
 library(shiny)
 shinyServer(function(input, output) {})
 ```
@@ -25,7 +25,7 @@ shinyServer(function(input, output) {})
 ## UI side
 
 In the beginning of UI, `fluidPage` sets the Shiny app's background page. Under the section of `fluidPage`, there're two main organs - Input() and Output() functions. 
-```{r}
+```{r eval=FALSE}
  ui <- fluidPage(
   # *Input() functions,
   # *Output() functions
@@ -37,7 +37,7 @@ There's also a layout option where we can rearrange how the shiny's outputs are 
 ## Input() functions
 
 This is how a common Input() function is listed:
-```{r}
+```{r eval=FALSE}
 sliderInput(inputId = "num", label = "Choose a number", ...)
 ```
 - `sliderInput`: sliderInput() from a list of Input() functions
@@ -49,7 +49,7 @@ Here is a list of all Input() functions avaliable:
 ![](https://www.dropbox.com/s/05hqa0yhcky9y82/shiny_input_functions.png?raw=1)
 
 This is another Input() function with `sliderInput()`. 
-```{r}
+```{r eval=FALSE}
 sliderInput(inputId = "num", 
 label = "Choose a number", 
 value = 25, min = 1, max = 100)
@@ -62,7 +62,7 @@ value = 25, min = 1, max = 100)
 ## Output() functions
 
 This is how a common Output() function is listed:
-```{r}
+```{r eval=FALSE}
 plotOutput("hist")
 ```
 - `plotOutput()`: This is to decide what sort of output to display 
@@ -74,7 +74,7 @@ Here is a list of all Output() functions avaliable:
 ## Input() and Output()
 
 This is a simple Shiny app with the Input() and Output() functions. 
-```{r}
+```{r eval=FALSE}
 library(shiny)
 
 ui <- fluidPage( 
@@ -99,19 +99,19 @@ shinyApp(ui = ui, server = server)
 ## Server side
 
 This is the skeleton for the server side.
-```{r}
+```{r eval=FALSE}
 server <- function(input, output) {}
 ```
 
 First, rebuild the Output() function's object from the UI side. The object was previously lablled as `hist`. In a way, `output$hist` is equivalent of `plotOutput("hist")`. 
-```{r}
+```{r eval=FALSE}
 server <- function(input, output) {
     output$hist <- # code
 }
 ```
 
 Second, `renderYOUR_CHOSEN_OUTPUT_FUNCTION()` the output object. In this case, it's `renderPlot({})`. 
-```{r}
+```{r eval=FALSE}
 server <- function(input, output) {
     output$hist <- renderPlot({ 
         hist(rnorm(100)) 
